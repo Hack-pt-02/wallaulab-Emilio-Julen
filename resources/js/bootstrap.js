@@ -1,6 +1,8 @@
 import _ from 'lodash';
 window._ = _;
 
+import '../css/app.css';
+import * as bootstrap from 'bootstrap';
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
  * to our Laravel back-end. This library automatically handles sending the
@@ -8,8 +10,6 @@ window._ = _;
  */
 
 import axios from 'axios';
-import '../css/app.css';
-import * as bootstrap from 'bootstrap';
 
 window.axios = axios;
 

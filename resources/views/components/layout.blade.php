@@ -12,6 +12,7 @@
 
     @vite(['resources/css/app.css'])
 
+    @livewireStyles
     {{$style ?? ''}}
 
 </head>
@@ -20,6 +21,7 @@
     <x-navbar />
     {{$slot}}
     <x-footer />
+    @livewireScripts
     @vite(['resources/js/app.js'])
     @vite(['resources/js/logout.js'])
     {{$script ?? ''}}

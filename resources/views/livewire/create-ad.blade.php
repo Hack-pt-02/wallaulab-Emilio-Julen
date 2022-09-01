@@ -1,5 +1,7 @@
 <div>
     <h1>Create new Ad</h1>
+    <form wire:submit.prevent="store">
+        @csrf
     <div class="mb-3">
         <label for="title" class="form-label">Titulo:</label>
         <input wire:model="title" type="text" class="form-control">

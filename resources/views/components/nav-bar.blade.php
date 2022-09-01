@@ -29,9 +29,9 @@
                         </li>
                         <li><a class="dropdown-item" href="#">Ejemplo</a></li>
                     </ul>
-                    
+
                     <!-- auth menu -->
-                    
+
                     @guest
                         @if (Route::has('login'))
                     <li class="nav-item ">
@@ -49,6 +49,11 @@
                             @csrf
                         </form>
                         <a id="logoutBtn" class="nav-link" href="#">Salir</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('ads.create') }}">
+                            Nuevo anuncio
+                        </a>
                     </li>
                 @endguest
                 </li>

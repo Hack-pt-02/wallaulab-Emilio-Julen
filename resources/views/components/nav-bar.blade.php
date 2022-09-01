@@ -29,7 +29,9 @@
                         </li>
                         <li><a class="dropdown-item" href="#">Ejemplo</a></li>
                     </ul>
+                    
                     <!-- auth menu -->
+                    
                     @guest
                         @if (Route::has('login'))
                     <li class="nav-item ">

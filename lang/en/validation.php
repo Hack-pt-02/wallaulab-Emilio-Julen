@@ -168,6 +168,10 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'title' => 'título',
+        'body' => 'descripción',
+        'price' => 'precio'
+    ],
 
 ];

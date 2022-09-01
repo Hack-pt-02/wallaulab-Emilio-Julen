@@ -47,8 +47,8 @@
                     <li class="nav-item">
                         <form id="logoutForm" action="{{ route('logout') }}" method="POST">
                             @csrf
+                            <a id="logoutBtn" class="nav-link" href="#">Salir</a>
                         </form>
-                        <a id="logoutBtn" class="nav-link" href="#">Salir</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('ads.create') }}">

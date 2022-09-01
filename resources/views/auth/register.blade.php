@@ -52,7 +52,7 @@
                                 <div class="validate"></div>
                             </div>
                             <!--Button-Register-->
-                            <button type="submit" class=" form-button-edit text-center space-around my-2">
+                            <button type="submit" class=" btn btn-primary form-button-edit text-center space-around my-2">
                                 Crear cuenta
                             </button>
                         </form>

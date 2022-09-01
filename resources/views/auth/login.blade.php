@@ -32,7 +32,7 @@
                         <div class="validate"></div>
                     </div>
                     <!--Button-Login-->
-                    <button type="submit" class="btn btn-info">
+                    <button type="submit" class="btn btn-primary">
                         Entrar
                     </button>
                 </form>

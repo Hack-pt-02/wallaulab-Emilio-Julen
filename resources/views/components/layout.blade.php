@@ -21,6 +21,7 @@
     {{$slot}}
     <x-footer />
     @vite(['resources/js/app.js'])
+    @vite(['resources/js/logout.js'])
     {{$script ?? ''}}
 </body>
 

@@ -3,8 +3,9 @@
 namespace App\Http\Livewire;
 
 use App\Models\Ad;
-use Livewire\Component;
 use App\Models\Category;
+use App\Models\User;
+use Livewire\Component;
 
 use Illuminate\Support\Facades\Auth;
 

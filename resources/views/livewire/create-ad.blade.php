@@ -16,12 +16,16 @@
             @enderror
         </div>
         <div class="mb-3">
-            <label for="caegory" class="form-label">Categoría:</label>
+            <label for="category" class="form-label">Categoría:</label>
             <select wire:model.defer="category" class="form-control">
-                <option value="">Selecciona una Categoría</option>
+                <option value="" @error('category') is-invalid @enderror>Selecciona una Categoría</option>
+                @error('category')
+                    {{ $message }}
+                @enderror
                 @foreach($categories as $category)
                     <option value="{{$category->id}}">{{$category->name}}</option>
-                @endforeach 
+                @endforeach
+                
             </select>
         </div>
         <div class="mb-3">

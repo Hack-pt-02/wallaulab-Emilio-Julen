@@ -11,6 +11,7 @@
     <title>{{$title ?? 'Rapido.es'}}</title>
 
     @vite(['resources/css/app.css'])
+    @vite(['resources/js/bootstrap.js'])
 
     @livewireStyles
     {{$style ?? ''}}

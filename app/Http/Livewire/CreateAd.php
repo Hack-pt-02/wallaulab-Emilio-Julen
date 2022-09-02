@@ -2,19 +2,22 @@
 
 namespace App\Http\Livewire;
 
-use Livewire\Component;
 use App\Models\Ad;
+use Livewire\Component;
+use App\Models\Category;
 
 class CreateAd extends Component
 {
     public $title;
     public $body;
     public $price;
+    public $category;
 
     protected $rules = [
         'title' => 'required|min:4',
         'body' => 'required|min:8',
-        'price' => 'required|numeric',
+        'category' => 'required', 
+        'price' => 'required|numeric'
     ];
 
     protected $messages = [
@@ -23,16 +26,17 @@ class CreateAd extends Component
         'numeric' => 'El campo :attribute debe ser un número',
     ];
 
+
     public function store()
     {
-        Ad::create([
-            'title' => $this->title,
-            'body' => $this->body,
-            'price' => $this->price,
+        $category = Category::find($this->category);
+        $category->ads()->create([
+            'title'=>$this->title,
+            'body'=>$this->body,
+            'price'=>$this->price,
         ]);
-
-        session()->flash('message','Anuncio Creado con éxito');
-
+        
+        session()->flash('message','Ad created successfully');
         $this->cleanForm();
     }
 
@@ -45,6 +49,7 @@ class CreateAd extends Component
     {
         $this->title = '';
         $this->body = '';
+        $this->category = "";
         $this->price = '';
     }
 

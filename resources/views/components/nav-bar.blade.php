@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand">Rapido.es</a>
+        <a class="navbar-brand">Wallaulab</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -14,7 +14,7 @@
                     <a class="nav-link" href="#">Quienes somos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Donde estamos</a>
+                    <a class="nav-link" href="#">Dónde estamos</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"

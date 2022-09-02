@@ -11,7 +11,7 @@
                     <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Quienes somos</a>
+                    <a class="nav-link" href="#">Quiénes somos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Dónde estamos</a>
@@ -22,12 +22,12 @@
                         Categorias
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Ejemplo</a></li>
-                        <li><a class="dropdown-item" href="#">Ejemplo</a></li>
+                        <li><a class="dropdown-item" href="#">Coche</a></li>
+                        <li><a class="dropdown-item" href="#">Moto</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#">Ejemplo</a></li>
+                        <li><a class="dropdown-item" href="#">Hogar</a></li>
                     </ul>
 
                     <!-- auth menu -->
@@ -52,7 +52,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('ads.create') }}">
-                            Nuevo anuncio
+                            Nuevo Anuncio
                         </a>
                     </li>
                 @endguest

@@ -10,7 +10,6 @@ use Illuminate\Database\Eloquent\Model;
 class Ad extends Model
 {
     protected $fillable = ['title','body','price'];
-    
 
     public function category()
     {
@@ -22,5 +21,4 @@ class Ad extends Model
     }
 
     use HasFactory;
-
 }

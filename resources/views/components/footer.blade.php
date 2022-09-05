@@ -1,3 +1,3 @@
 <div>
-    <h1>lo mejor</h1>
+    <footer>AQUÍ VA EL FOOTER</footer>
 </div>

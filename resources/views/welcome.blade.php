@@ -1,4 +1,6 @@
 <x-layout>
+    <x-slot name='title'>Rapido - Homepage</x-slot>
+    <h1>Bienvenido a Rapido.es</h1>
     <section class="call-to-action">
         <div class="container">
             <div class="row">
@@ -23,7 +25,7 @@
                                 <p class="card-text">{{ $ad->body }}</p>
                                 <div class="card-subtitle mb-2">
                                     <strong><a href="#">#{{ $ad->category->name }}</a></strong>
-                                    <i>{{ $ad->create_at->format('d/m/Y') }}</i>
+                                    <i>{{ $ad->created_at->format('d/m/Y') }}</i>
                                 </div>
                                 <div class="card-subtitle mb-2">
                                     <small>{{ $ad->user->name }}</small>
@@ -37,9 +39,6 @@
                     <h2>Uyy.. parece que no hay nada</h2>
                     <a href="{{ route('ads.create') }}" class="btn btn-success">Vende tu primer objeto</a> o <a href="{{ route('home') }}" class="btn btn-primary">Vuelve a la home</a>
                 </div>
-            @endempty
+            @endforelse
     </section>
-
-    <x-slot name='title'>Rapido - Homepage</x-slot>
-    <h1>Bienvenido a Rapido.es</h1>
 </x-layout>

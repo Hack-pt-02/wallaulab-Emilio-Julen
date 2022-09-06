@@ -26,9 +26,9 @@ class CreateAd extends Component
     ];
 
     protected $messages = [
-        'required' => 'El campo :attribute es requerido',
-        'min' => 'El campo :attribute tiene una longitud mínima de :min caracteres',
-        'numeric' => 'El campo :attribute debe ser un número',
+        'required' => 'El campo :attribute es requerido.',
+        'min' => 'El campo :attribute tiene una longitud mínima de :min caracteres.',
+        'numeric' => 'El campo :attribute debe ser un número.',
     ];
 
 

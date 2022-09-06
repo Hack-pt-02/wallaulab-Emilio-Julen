@@ -17,18 +17,18 @@
                     <a class="nav-link" href="#">Dónde estamos</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Categorias
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Categorías
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Coche</a></li>
-                        <li><a class="dropdown-item" href="#">Moto</a></li>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                        @foreach ($categories as $category)
                         <li>
-                            <hr class="dropdown-divider">
+                            <a class="dropdown-item" href="{{route('category.ads',$category)}}">{{$category->name}}</a>
                         </li>
-                        <li><a class="dropdown-item" href="#">Hogar</a></li>
-                    </ul>
+                        @endforeach
+
+                        </ul>
 
                     <!-- auth menu -->
 

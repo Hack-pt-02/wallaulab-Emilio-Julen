@@ -1,4 +1,3 @@
-
 <x-layout>
     <x-slot name='title'>Rapido - Vende algo interesante</x-slot>
     <div class="container">

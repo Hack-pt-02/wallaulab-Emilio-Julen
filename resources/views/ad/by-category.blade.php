@@ -20,7 +20,7 @@
                                 <div class="card-subtitle mb-2">
                                     <small>{{ $ad->user->name }}</small>
                                 </div>
-                                <a href="#" class="btn btn-primary">Mostrar más</a>
+                                <a href="{{route("ads.show", $ad)}}" class="btn btn-primary">Mostrar más</a>
                         </div>
                     </div>
                 </div>
@@ -30,5 +30,6 @@
                     <a href="{{ route('ads.create') }}" class="btn btn-success">Vende tu primer objeto</a> o <a href="{{ route('home') }}" class="btn btn-primary">Vuelve a la home</a>
                 </div>
             @endforelse
+            {{$ads->links()}}
     </section>
 </x-layout>

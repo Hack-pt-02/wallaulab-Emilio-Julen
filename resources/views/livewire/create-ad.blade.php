@@ -47,8 +47,8 @@
             @enderror
             </textarea>
         </div>
-        <div class="my-3">
-            <button type="submit" class="btn btn-info">Crear</button>
+        <div class="container d-flex justify-content-center my-3">
+                <button type="submit" class="box-icon btn btn-info">Crear<box-icon  type='solid' name='save'></box-icon></button>
         </div>
     </form>
 </div>

@@ -29,3 +29,9 @@
     .m-text-center {text-align:center;}
     .call-to-action h1{font-size:25px;}
 }
+
+.box-icon {
+    display: flex;
+    width: 140px;
+    justify-content: space-evenly;
+}

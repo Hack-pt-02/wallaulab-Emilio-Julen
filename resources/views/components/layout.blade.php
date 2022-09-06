@@ -15,6 +15,8 @@
 
     @livewireStyles
     {{$style ?? ''}}
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
 
 </head>
 
@@ -25,6 +27,7 @@
     @livewireScripts
     @vite(['resources/js/app.js'])
     @vite(['resources/js/logout.js'])
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
     {{$script ?? ''}}
 </body>
 

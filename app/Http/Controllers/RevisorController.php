@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-use App\Models\ad;
+use App\Models\Ad;
 
 class RevisorController extends Controller
 {
@@ -30,23 +29,4 @@ class RevisorController extends Controller
             ->back()
             ->withMessage(['type' => 'danger', 'text' => 'Anuncio rechazado']);
     }
-
-    /* otra manera */
-
-    /* public function acceptAd(Ad $ad)
-    {
-        $ad->is_accepted = true;
-        $ad->save();
-        return redirect()
-            ->back()
-            ->withMessage(['type' => 'success', 'text' => 'Anuncio aceptado']);
-    }
-    public function rejectAd(Ad $ad)
-    {
-        $ad->is_accepted = false;
-        $ad->save();
-        return redirect()
-            ->back()
-            ->withMessage(['type' => 'danger', 'text' => 'Anuncio rechazado']);
-    } */
 }

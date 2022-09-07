@@ -17,18 +17,20 @@
                     <a class="nav-link" href="#">Dónde estamos</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
                         Categorías
                     </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
                         @foreach ($categories as $category)
-                        <li>
-                            <a class="dropdown-item" href="{{route('category.ads',$category)}}">{{$category->name}}</a>
-                        </li>
+                            <li>
+                                <a class="dropdown-item"
+                                    href="{{ route('category.ads', $category) }}">{{ $category->name }}</a>
+                            </li>
                         @endforeach
 
-                        </ul>
+                    </ul>
 
                     <!-- auth menu -->
 
@@ -58,6 +60,34 @@
                 @endguest
                 </li>
             </ul>
+        
+
+            <ul class="nav-item dropdown mx-5">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    {{ Auth::user()->name }}
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    @if (Auth::user()->is_revisor)
+                        <li>
+                            <a class="dropdown-item" href="{{ route('revisor.home') }}">
+                                Revisor
+                                <span class="badge rounded-pill bg-danger">
+                                    {{ \App\Models\Ad::ToBeRevisionedCount() }}
+                                </span>
+                            </a>
+                        </li>
+                    @endif
+                    <li>
+                        <form id="logoutForm" action="{{ route('logout') }}" method="POST">
+                            @csrf
+                        </form>
+                        <a id="logoutBtn" class="dropdown-item" href="#">Salir</a>
+                    </li>
+                </ul>
+            </ul>
+
+
         </div>
     </div>
 </nav>

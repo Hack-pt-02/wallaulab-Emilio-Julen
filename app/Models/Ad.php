@@ -9,14 +9,26 @@ use Illuminate\Database\Eloquent\Model;
 
 class Ad extends Model
 {
-    protected $fillable = ['title','body','price'];
+    protected $fillable = ['title', 'body', 'price'];
+
+    static public function ToBeRevisionedCount() {
+        return Ad::where('is_accepted', null)->count();
+    }
+
+    public function setAccepted($value)
+    {
+        $this->is_accepted = $value;
+        $this->save();
+        return true;
+    }
 
     public function category()
     {
         return $this->belongsTo(Category::class);
     }
 
-    public function user() {
+    public function user()
+    {
         return $this->belongsTo(User::class);
     }
 

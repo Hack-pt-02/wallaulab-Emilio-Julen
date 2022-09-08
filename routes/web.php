@@ -25,6 +25,9 @@ Route::get('/category/{category:name}/ads', [PublicController::class,'adsByCateg
 
 Route::get('/ads/{ad}', [AdController::class,'show'])->name("ads.show");
 
+Route::get('revisor/become', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('revisor.become');
+
+Route::get('revisor/{user}/make',[RevisorController::class,'makeRevisor'])->middleware('auth')->name('revisor.make');
 
 Route::middleware(['isRevisor'])->group(function () {
     Route::patch('/revisor/ad/{ad}/accept',[RevisorController::class,'acceptAd'])->name('revisor.ad.accept');

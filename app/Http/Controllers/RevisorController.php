@@ -5,6 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Ad;
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
+
+use App\Http\Mail\BecomeRevisor;
+
+
+
 class RevisorController extends Controller
 {
     public function index()
@@ -28,5 +35,12 @@ class RevisorController extends Controller
         return redirect()
             ->back()
             ->withMessage(['type' => 'danger', 'text' => 'Anuncio rechazado']);
+    }
+    public function becomeRevisor()
+    {
+        Mail::to('admin@wallaulab.es')->send(new BecomeRevisor(Auth::user()));
+        return redirect()
+            ->route('home')
+            ->withMessage(['type' => 'success', 'text' => 'Solicitud enviada con éxito, pronto sabrás algo, gracias!']);
     }
 }

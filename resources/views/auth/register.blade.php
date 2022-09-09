@@ -3,9 +3,9 @@
     <!-- ======= REGISTER ======= -->
     <div class="container-fluid bg-accent vh-100">
         <div class="row mb-5 pb-5">
-            <div class="col-12 col-md-8 ms-5">
+            <div class="col-12">
                 <div class="d-flex flex-column align-items-center ">
-                    <div class="form-content justify-content-center mb-5 pb-5">
+                    <div class="form-content w-50 justify-content-center mb-5 pb-5">
                         <!--FORM TITLE -->
                         <div class="section-title">
                             <h2 class="form-title space-around">Crear cuenta

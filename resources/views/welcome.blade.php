@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot name='title'>Rapido - Homepage</x-slot>
-    <h1>Bienvenido a Wallaulab.es</h1>
+    <h1>{{__('messages.welcome')}}</h1>
     <section class="call-to-action">
         <div class="container">
             <div class="row">

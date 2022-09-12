@@ -34,3 +34,7 @@ Route::middleware(['isRevisor'])->group(function () {
     Route::patch('/revisor/ad/{ad}/reject',[RevisorController::class,'rejectAd'])->name('revisor.ad.reject');
     Route::get('/revisor',[RevisorController::class,'index'] )->name('revisor.home');
 });
+
+/* Locale */
+
+Route::post('/locale/{locale}', [PublicController::class,'setLocale'])->name('locale.set');

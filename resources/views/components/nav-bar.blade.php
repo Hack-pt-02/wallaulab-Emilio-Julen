@@ -8,20 +8,18 @@
             <ul class="navbar-nav d-md-flex justify-md-content-between w-100 text-center me-auto mb-2 mb-lg-0">
                 <div class="d-flex">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('home') }}">{{__('Home')}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Quiénes somos</a>
+                    <a class="nav-link" href="#">{{__('Quienes somos')}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Dónde estamos</a>
+                    <a class="nav-link" href="#">{{__('Dónde estamos')}}</a>
                 </li>
 
                 <!-- CATEGORIES -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Categorías
-                    </a>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{__('Categorías')}}</a>
                     <ul class="dropdown-menu">
                         @foreach ($categories as $category)
                         <li>
@@ -35,12 +33,12 @@
                 @guest
                 @if (Route::has('login'))
                 <li class="nav-item ">
-                    <a class="nav-link" href="{{ route('login') }}"><span>Entrar</span></a>
+                    <a class="nav-link" href="{{ route('login') }}"><span>{{__('Entrar')}}</span></a>
                 </li>
                 @endif
                 @if (Route::has('register'))
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('register') }}"><span>Registrar</span></a>
+                    <a class="nav-link" href="{{ route('register') }}"><span>{{__('Registrar')}}</span></a>
                 </li>
                 @endif
                 </div>

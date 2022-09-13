@@ -3,7 +3,7 @@
     <h1>Bienvenido a Rapido.es</h1>
     
     <section class="container my-3">
-        <h1>Anuncios por categoría: {{$category->name}}</h1>
+        <h1>{{ __('Anuncios por categría') }}: {{$category->name}}</h1>
         <div class="row">
             @forelse($ads as $ad)
                 <div class='col-12 col-md-4'>
@@ -20,14 +20,14 @@
                                 <div class="card-subtitle mb-2">
                                     <small>{{ $ad->user->name }}</small>
                                 </div>
-                                <a href="{{route("ads.show", $ad)}}" class="btn btn-primary">Mostrar más</a>
+                                <a href="{{route("ads.show", $ad)}}" class="btn btn-primary">{{ __('Mostrar Más') }}</a>
                         </div>
                     </div>
                 </div>
             @empty
                 <div class="col-12">
-                    <h2>Uyy... parece que no hay nada de esta categoría...</h2>
-                    <a href="{{ route('ads.create') }}" class="btn btn-success">Vende tu primer objeto</a> o <a href="{{ route('home') }}" class="btn btn-primary">Vuelve a la home</a>
+                    <h2>{{ __("Uyy... parece que no hay nada de esta categoría...") }}</h2>
+                    <a href="{{ route('ads.create') }}" class="btn btn-success">{{ __("Vende tu primer objeto") }}</a> {{ __("o") }} <a href="{{ route('home') }}" class="btn btn-primary">{{ __("Vuelve a la home") }}</a>
                 </div>
             @endforelse
             {{$ads->links()}}

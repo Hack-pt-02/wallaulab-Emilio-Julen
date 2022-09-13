@@ -20,7 +20,7 @@
                 <!-- CATEGORIES -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Categorías
+                    Categorías
                     </a>
                     <ul class="dropdown-menu">
                         @foreach ($categories as $category)
@@ -29,7 +29,7 @@
                         </li>
                         @endforeach
                     </ul>
-                  </li>
+                </li>
                 <!-- auth menu -->
 
                 @guest
@@ -69,12 +69,24 @@
                             <form id="logoutForm" action="{{ route('logout') }}" method="POST">
                                 @csrf
                             </form>
-                            <a id="logoutBtn" class="dropdown-item" href="#">Salir</a>
+                            <a id="logoutBtn" class="dropdown-item" href="#">{{__('Salir')}}</a>
                         </li>
                     </ul>
                 </li>
             </div>
                 @endguest
+
+<li class="nav-item">
+    <x-locale lang="en" country="gb" />
+</li>
+
+<li class="nav-item">
+    <x-locale lang="it" country="it" />
+</li>
+
+<li class="nav-item">
+    <x-locale lang="es" country="es" />
+</li>
             </ul>
         </div>
     </div>

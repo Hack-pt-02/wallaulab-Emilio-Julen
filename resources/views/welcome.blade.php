@@ -5,10 +5,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-sm-8 text-right m-text-center">
-                    <h1>¿Tienes un producto y no sabes qué hacer con él?</h1>
+                    <h1>{{ __('¿Tienes un producto y no sabes qué hacer con él?') }}</h1>
                 </div>
                 <div class="col-md-4 col-sm-4 m-text-center">
-                    <a class=" box-icon btn btn-white" href="{{ Route('ads.create') }}">¡SÚBELO!<span class="mx-2"><box-icon class="up-circle" name='up-arrow-circle' type='solid' animation='tada' ></box-icon></span></a>
+                    <a class=" box-icon btn btn-white" href="{{ Route('ads.create') }}">{{ __('¡SÚBELO!') }}<span class="mx-2"><box-icon class="up-circle" name='up-arrow-circle' type='solid' animation='tada' ></box-icon></span></a>
                 </div>
             </div>
         </div>

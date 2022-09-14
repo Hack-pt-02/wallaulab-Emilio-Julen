@@ -18,14 +18,15 @@
         <div class="mb-3">
             <label for="category" class="form-label">{{ __('Categoría') }}</label>
             <select wire:model.defer="category" class="form-control">
-                <option value="" @error('category') is-invalid @enderror>{{ __('Selecciona una Categoría') }}</option>
+                <option value="" @error('category') is-invalid @enderror>{{ __('Selecciona una Categoría') }}
+                </option>
                 @error('category')
                     {{ $message }}
                 @enderror
-                @foreach($categories as $category)
-                    <option value="{{$category->id}}">{{$category->name}}</option>
+                @foreach ($categories as $category)
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>
                 @endforeach
-                
+
             </select>
         </div>
         <div class="mb-3">
@@ -47,8 +48,20 @@
             @enderror
             </textarea>
         </div>
+        <!-- Image Add -->
+        
+        <div class="mb-3">
+            <input wire:model="temporary_images" type="file" name="images" multiple
+                class="form-control shadow @error('temporary_images.*') is-invalid @enderror">
+            @error('temporary_images.*')
+                <p class="text-danger mt-2">{{ $message }}</p>
+            @enderror
+        </div>
+
+        <!-- button -->
         <div class="container d-flex justify-content-center my-3">
-                <button type="submit" class="box-icon btn btn-info">{{ __('Crear') }}<box-icon  type='solid' name='save'></box-icon></button>
+            <button type="submit" class="box-icon btn btn-info">{{ __('Crear') }}<box-icon type='solid'
+                    name='save'></box-icon></button>
         </div>
     </form>
 </div>

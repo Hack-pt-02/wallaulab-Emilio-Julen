@@ -43,7 +43,7 @@ class CreateAd extends Component
 
     public function store()
     {
-        $this->validate();
+        $validatedData = $this->validate();
 
         $category = Category::find($this->category);
         $ad = $category->ads()->create([
@@ -55,6 +55,14 @@ class CreateAd extends Component
         Auth::user()
             ->ads()
             ->save($ad);
+
+if(count($this->images)){
+    foreach ($this->images as $image) {
+        $ad->images()->create([
+            'path'=>$image->store("images/$ad->id",'public')
+        ]);
+    }
+}
 
         session()->flash('message', 'Ad created successfully');
         $this->cleanForm();
@@ -85,8 +93,16 @@ class CreateAd extends Component
         }
     }
 
+public function removeImage($key)
+{
+    if(in_array($key,array_keys($this->images))){
+        unset($this->images[$key]);
+    }
+}
+
     public function render()
     {
         return view('livewire.create-ad');
     }
+    
 }

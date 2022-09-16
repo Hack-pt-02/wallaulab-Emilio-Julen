@@ -2,14 +2,17 @@
 
 namespace App\Http\Livewire;
 
-use Illuminate\Support\Facades\Auth;
-
 use App\Models\Ad;
-use App\Models\Category;
+
 use App\Models\User;
 use Livewire\Component;
+use App\Models\Category;
+use App\Jobs\ResizeImage;
 
 use Livewire\WithFileUploads;
+
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 class CreateAd extends Component
 {
@@ -56,13 +59,16 @@ class CreateAd extends Component
             ->ads()
             ->save($ad);
 
-if(count($this->images)){
-    foreach ($this->images as $image) {
-        $ad->images()->create([
-            'path'=>$image->store("images/$ad->id",'public')
-        ]);
-    }
-}
+        if (count($this->images)) {
+            $newFileName = "ads/$ad->id";
+            foreach ($this->images as $image) {
+                $newImage = $ad->images()->create([
+                    'path' => $image->store($newFileName, 'public'),
+                ]);
+                dispatch(new ResizeImage($newImage->path, 400, 300));
+            }
+            File::deleteDirectory(storage_path('/app/livewire-tmp'));
+        }
 
         session()->flash('message', 'Ad created successfully');
         $this->cleanForm();
@@ -85,24 +91,24 @@ if(count($this->images)){
     {
         if (
             $this->validate([
-                'temporary_images.*' => 'image|max:2048'
-            ])) {
+                'temporary_images.*' => 'image|max:2048',
+            ])
+        ) {
             foreach ($this->temporary_images as $image) {
                 $this->images[] = $image;
             }
         }
     }
 
-public function removeImage($key)
-{
-    if(in_array($key,array_keys($this->images))){
-        unset($this->images[$key]);
+    public function removeImage($key)
+    {
+        if (in_array($key, array_keys($this->images))) {
+            unset($this->images[$key]);
+        }
     }
-}
 
     public function render()
     {
         return view('livewire.create-ad');
     }
-    
 }

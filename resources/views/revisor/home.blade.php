@@ -1,4 +1,3 @@
-
 <x-layout>
     <x-slot name='title'>Wallaulab - Revisor Home</x-slot>
     @if ($ad)

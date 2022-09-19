@@ -1,6 +1,6 @@
 <x-layout>
-    <x-slot name='title'>Wallaulab - {{$category->name}} ads</x-slot>
-    <h1>Bienvenido a Rapido.es</h1>
+    <x-slot name='title'>Wallaulab - {{$category->name}}</x-slot>
+    <h1>Bienvenido a Wallaulab</h1>
     
     <section class="container my-3">
         <h1>{{ __('Anuncios por categría') }}: {{$category->name}}</h1>

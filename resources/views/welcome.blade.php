@@ -1,17 +1,18 @@
 <x-layout>
     <x-slot name='title'>Wallaulab - Homepage</x-slot>
-    <h1>{{ __('Bienvenido a wallaulab.es') }}</h1>
-    <section class="call-to-action">
+    <section>
+        <img src="/media/bienvenido-a-wallaulab-banner.png">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-sm-8 text-right m-text-center">
                     <h1>{{ __('¿Tienes un producto y no sabes qué hacer con él?') }}</h1>
                 </div>
                 <div class="col-md-4 col-sm-4 m-text-center">
-                    <a class=" box-icon btn btn-white" href="{{ Route('ads.create') }}">{{ __('¡SÚBELO!') }}<span
-                            class="mx-2">
+                    <a class=" box-icon btn btn-white" href="{{ Route('ads.create') }}">{{ __('¡SÚBELO!') }}>
+                        <span class="mx-2">
                             <box-icon class="up-circle" name='up-arrow-circle' type='solid' animation='tada'></box-icon>
-                        </span></a>
+                        </span>
+                    </a>
                 </div>
             </div>
         </div>

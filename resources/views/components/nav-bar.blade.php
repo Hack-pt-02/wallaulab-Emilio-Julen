@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-light">
+<nav id="navbar" class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{route("home")}}"><img src="/icon/wallaulab.png" style="width:100px"></a>
         <a href="{{route("home")}}" class="d-lg-none fs-1 text-reset text-decoration-none fw-bolder">Wallaulab</a>

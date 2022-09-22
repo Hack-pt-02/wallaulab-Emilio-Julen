@@ -1,6 +1,7 @@
 @import '~bootstrap/dist/css/bootstrap';
 @import '~flag-icon-css/css/flag-icons';
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import '~bootstrap-icons/font/bootstrap-icons';
 
 *{
     font-family: 'Poppins', sans-serif;
@@ -45,3 +46,22 @@
 #name-navbar {
     margin-right: 5em !important;
 }
+
+.VERY_UNLIKELY{
+    color: greenyellow
+}
+.UNLIKELY {
+    color: green
+}
+.POSSIBLE {
+    color: orange;
+} 
+.LIKELY {
+    color: orangered;
+} 
+.VERY_LIKELY{
+    color: red;
+}
+.UNKNOWN {
+    color: grey;
+} 

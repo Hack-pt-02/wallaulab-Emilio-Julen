@@ -10,6 +10,10 @@ class Image extends Model
 {
     use HasFactory;
 
+    protected $casts = [
+        'labels' => 'array',
+    ];
+
     protected $fillable = ['path'];
 
     public function ads()
@@ -18,7 +22,6 @@ class Image extends Model
     }
 
     /* Recuperar imagenes editadas en el front */
-
 
     public static function getUrlByFilePath($filePath, $w = null, $h = null)
     {

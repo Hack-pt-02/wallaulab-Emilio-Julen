@@ -1,6 +1,6 @@
 
 <x-layout>
-    <x-slot name="title">Rapido - Login</x-slot>
+    <x-slot name="title">Wallaulab - Login</x-slot>
     <!-- ======= FORM LOGIN ======= -->
     <div class="container-fluid">
         <div class="row">

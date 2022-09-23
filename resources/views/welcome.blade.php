@@ -1,5 +1,5 @@
 <x-layout>
-    <x-slot name='title'>Wallaulab - Homepage</x-slot>
+    <x-slot name='title'> Wallaulab - Homepage </x-slot>
     <section>
         <img src="/media/bienvenido-a-wallaulab-banner.png">
         <div class="container">
@@ -8,7 +8,7 @@
                     <h1>{{ __('¿Tienes un producto y no sabes qué hacer con él?') }}</h1>
                 </div>
                 <div class="col-md-4 col-sm-4 m-text-center">
-                    <a class=" box-icon btn btn-white" href="{{ Route('ads.create') }}">{{ __('¡SÚBELO!') }}>
+                    <a class="box-icon btn btn-success" href="{{ Route('ads.create') }}">{{ __('¡SÚBELO!') }}
                         <span class="mx-2">
                             <box-icon class="up-circle" name='up-arrow-circle' type='solid' animation='tada'></box-icon>
                         </span>
@@ -22,7 +22,6 @@
             @forelse($ads as $ad)
             <div class='col-12 col-md-4'>
                 <div class='card mb-5'>
-
                     @if ($ad->images()->count() > 0)
                     <img src="{{ $ad->images()->first()->getUrl(400,300) }}" class="card-img-top" alt="...">
                     @else
@@ -34,7 +33,7 @@
                             <p class="card-text">{{ $ad->body }}</p>
                             <div class="card-subtitle mb-2">
                                 <strong><a
-                                        href="{{route('category.ads',$ad->category)}}">#{{ $ad->category->name }}</a></strong>
+                                    href="{{route('category.ads',$ad->category)}}">#{{ $ad->category->name }}</a></strong>
                                 <i>{{ $ad->created_at->format('d/m/Y') }}</i>
                             </div>
                             <div class="card-subtitle mb-2">

@@ -14,6 +14,7 @@
                         </span>
                     </a>
                 </div>
+                <button class="btn btn-warning" id="swal">cliqueame</button>
             </div>
         </div>
     </section>
@@ -50,5 +51,5 @@
                 {{ __('o') }} <a href="{{ route('home') }}" class="btn btn-primary">{{ __('Vuelve a la home') }}</a>
             </div>
             @endforelse
-    </section>
+    </section>    
 </x-layout>

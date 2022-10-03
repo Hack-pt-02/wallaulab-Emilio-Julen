@@ -74,6 +74,10 @@
                 </li>
             </div>
                 @endguest
+                
+                <div class="col-md-4 col-sm-4 m-text-center">
+                    <a class="box-icon btn btn-success" href="{{ Route('ads.create') }}">{{ __('¡SÚBELO!') }}</a>
+                </div>
 
 <li class="nav-item">
     <x-locale lang="en" country="gb" />

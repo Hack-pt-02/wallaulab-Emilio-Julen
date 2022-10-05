@@ -10,8 +10,8 @@
 .call-to-action {background:#0086d2; padding:40px 0;}
 
 .call-to-action  h1{
-    text-transform:uppercase; 
-    color:#fff; 
+    text-transform:uppercase;
+    color:#fff;
     font-family:Arial;
     font-size:40px;
     }
@@ -55,13 +55,35 @@
 }
 .POSSIBLE {
     color: orange;
-} 
+}
 .LIKELY {
     color: orangered;
-} 
+}
 .VERY_LIKELY{
     color: red;
 }
 .UNKNOWN {
     color: grey;
-} 
+}
+
+body {
+    max-width: 1900px;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #ffffff 40px ), repeating-linear-gradient( #828FD155, #828FD1 );
+}
+
+.btn-primary {
+    background-color: #828FD1;
+    border: 0;
+}
+
+.btn-success {
+    background-color: #4D74D2;
+    border: 0;
+}
+
+#subelo {
+    border-radius: 10px;
+    background-color: #0086d2;
+    padding: 10px;
+    text-align: center;
+}

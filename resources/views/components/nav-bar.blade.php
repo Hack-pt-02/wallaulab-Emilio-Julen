@@ -37,7 +37,7 @@
 
                 </div>
                 <!-- auth menu -->
-                <div class="d-flex flex-column flex-lg-row">
+                <div class="d-flex justify-content-center flex-column flex-lg-row">
                     @guest
                         @if (Route::has('login'))
                             <li class="nav-item ">
@@ -51,7 +51,7 @@
                         @endif
                     <!-- AQUÍ EMPIEZA REVISOR -->
                 @else
-                    <div class="d-flex">
+                    <div class="d-flex justify-content-center">
                         <li class="nav-item dropdown mx-2">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
@@ -77,16 +77,16 @@
                             </li>
                         @endif
                     @endguest
-                    <div class="d-flex align-items-center align-items-md-start flex-column flex-lg-row mx-3">
-                        <li class="nav-item">
+                    <div class="d-flex justify-content-center align-items-center flex-lg-row mx-3">
+                        <li class="nav-item mx-2">
                             <x-locale lang="en" country="gb" />
                         </li>
         
-                        <li class="nav-item">
+                        <li class="nav-item mx-2">
                             <x-locale lang="it" country="it" />
                         </li>
         
-                        <li class="nav-item">
+                        <li class="nav-item mx-2">
                             <x-locale lang="es" country="es" />
                         </li>
                     </div>

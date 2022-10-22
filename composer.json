@@ -11,6 +11,7 @@
         "laravel/fortify": "^1.13",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
+        "laravel/scout": "^9.4",
         "laravel/tinker": "^2.7",
         "livewire/livewire": "^2.10",
         "spatie/image": "^2.2"

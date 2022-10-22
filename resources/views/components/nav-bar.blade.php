@@ -49,47 +49,55 @@
                                 <a class="nav-link" href="{{ route('register') }}"><span>{{ __('Registrar') }}</span></a>
                             </li>
                         @endif
-                    <!-- AQUÍ EMPIEZA REVISOR -->
-                @else
-                    <div class="d-flex justify-content-center">
-                        <li class="nav-item dropdown mx-2">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                {{ Auth::user()->name }}
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li class="dropdown-item">
-                                    <form id="logoutForm" action="{{ route('logout') }}" method="POST">
-                                        @csrf
-                                    </form>
-                                    <a id="logoutBtn" class="dropdown-item" href="#">{{ __('Salir') }}</a>
-                                </li>
-                            </ul>
-                        </li>
-                        @if (Auth::user()->is_revisor)
-                            <li class="d-flex align-items-center">
-                                <a href="{{ route('revisor.home') }}">
-                                    <span class="fs-7 badge rounded-pill bg-danger">
-                                        <i class="bi bi-bell"></i>
-                                        {{ \App\Models\Ad::ToBeRevisionedCount() }}
-                                    </span>
+                        <!-- AQUÍ EMPIEZA REVISOR -->
+                    @else
+                        <div class="d-flex justify-content-center">
+                            <li class="nav-item dropdown mx-2">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    {{ Auth::user()->name }}
                                 </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li class="dropdown-item">
+                                        <form id="logoutForm" action="{{ route('logout') }}" method="POST">
+                                            @csrf
+                                        </form>
+                                        <a id="logoutBtn" class="dropdown-item" href="#">{{ __('Salir') }}</a>
+                                    </li>
+                                </ul>
                             </li>
-                        @endif
-                    @endguest
-                    <div class="d-flex justify-content-center align-items-center flex-lg-row mx-3">
-                        <li class="nav-item mx-2">
-                            <x-locale lang="en" country="gb" />
-                        </li>
-        
-                        <li class="nav-item mx-2">
-                            <x-locale lang="it" country="it" />
-                        </li>
-        
-                        <li class="nav-item mx-2">
-                            <x-locale lang="es" country="es" />
-                        </li>
-                    </div>
+                            @if (Auth::user()->is_revisor)
+                                <li class="d-flex align-items-center">
+                                    <a href="{{ route('revisor.home') }}">
+                                        <span class="fs-7 badge rounded-pill bg-danger">
+                                            <i class="bi bi-bell"></i>
+                                            {{ \App\Models\Ad::ToBeRevisionedCount() }}
+                                        </span>
+                                    </a>
+                                </li>
+                            @endif
+                        @endguest
+                        <div class="d-flex justify-content-center align-items-center flex-lg-row mx-3">
+                            <li class="nav-item mx-2">
+                                <x-locale lang="en" country="gb" />
+                            </li>
+
+                            <li class="nav-item mx-2">
+                                <x-locale lang="it" country="it" />
+                            </li>
+
+                            <li class="nav-item mx-2">
+                                <x-locale lang="es" country="es" />
+                            </li>
+                        </div>
+                        <div>
+                            <form action="{{ route('search') }}" method="GET" class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                                    name="q">
+                                <button class="btn btn-outline-success" type="submit"><i
+                                        class="bi bi-search"></i></button>
+                            </form>
+                        </div>
             </ul>
         </div>
     </div>

@@ -7,11 +7,16 @@ use App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+use Laravel\Scout\Searchable;
+
 class Ad extends Model
 {
+    use HasFactory, Searchable;
+
     protected $fillable = ['title', 'body', 'price'];
 
-    static public function ToBeRevisionedCount() {
+    static public function ToBeRevisionedCount()
+    {
         return Ad::where('is_accepted', null)->count();
     }
 
@@ -32,9 +37,17 @@ class Ad extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function images() {
+    public function images()
+    {
         return $this->hasMany(Image::class);
     }
 
-    use HasFactory;
+
+    public function toSearchableArray()
+    {
+        return [
+            'title' => $this->title,
+            'body' => $this->body,
+        ];
+    }
 }

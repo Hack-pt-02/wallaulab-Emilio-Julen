@@ -38,3 +38,7 @@ Route::middleware(['isRevisor'])->group(function () {
 /* Locale */
 
 Route::post('/locale/{locale}', [PublicController::class,'setLocale'])->name('locale.set');
+
+/* search */
+
+Route::get("/search",[PublicController::class,'search'])->name('search');

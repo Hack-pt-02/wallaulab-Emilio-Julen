@@ -6,7 +6,7 @@ use App\Models\Ad;
 use Illuminate\Http\Request;
 use App\Models\Category;
 
-/* 
+/*
 class PublicController extends Controller
 {
     public function index () {
@@ -18,16 +18,22 @@ class PublicController extends Controller
 
 class PublicController extends Controller
 {
-
     public function index()
     {
-        $ads = Ad::where('is_accepted', true)->orderBy('created_at', 'desc')->take(6)->get(); // sort in db
+        $ads = Ad::where('is_accepted', true)
+            ->orderBy('created_at', 'desc')
+            ->take(6)
+            ->get(); // sort in db
         return view('welcome', compact('ads'));
     }
 
     public function adsByCategory(Category $category)
     {
-        $ads = $category->ads()->where('is_accepted', true)->latest()->paginate(6);
+        $ads = $category
+            ->ads()
+            ->where('is_accepted', true)
+            ->latest()
+            ->paginate(6);
         return view('ad.by-category', compact('category', 'ads'));
     }
 
@@ -35,5 +41,15 @@ class PublicController extends Controller
     {
         session()->put('locale', $locale);
         return redirect()->back();
+    }
+
+    public function search(Request $request)
+    {
+        
+        $q = $request->input('q');
+        $ads = Ad::search($q)
+        ->where('is_accepted', true)
+        ->get();
+        return view('search_results', compact('q', 'ads'));
     }
 }

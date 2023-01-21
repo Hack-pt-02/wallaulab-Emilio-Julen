@@ -21,7 +21,8 @@
                                                     alt="...">
                                             </div>
                                             <div class="col-md-8">
-                                                Adult : <i class="bi bi-circle-fill {{ $image->adult }}"></i>
+                                                <p class="alert alert-info">aquí se mostaría el tipo de contenido utilizando Safe Search de google API, no se muestra por temas de credenciales<p>
+                                                {{-- Adult : <i class="bi bi-circle-fill {{ $image->adult }}"></i>
                                                 [{{ $image->adult }}] <br>
                                                 Spoof : <i class="bi bi-circle-fill {{ $image->spoof }}"></i>
                                                 [{{ $image->spoof }}] <br>
@@ -30,14 +31,15 @@
                                                 Violence : <i class="bi bi-circle-fill {{ $image->violence }}"></i>
                                                 [{{ $image->violence }}] <br>
                                                 Racy : <i class="bi bi-circle-fill {{ $image->racy }}"></i>
-                                                [{{ $image->racy }}]
+                                                [{{ $image->racy }}] --}}
                                                 <br><br>
 
                                                 <b>Labels</b><br>
-                                                @foreach ($image->labels as $label)
+                                                <p class="alert alert-info">aquí se mostarían unas estiquetas creadas de manera dinámica con la google API con tags del contenido de la imgen, no se muestra por temas de credenciales<p>
+                                                {{-- @foreach ($image->labels as $label)
                                                     <a href="#"
                                                         class="btn btn-info btn-sm m-1">{{ $label }}</a>
-                                                @endforeach
+                                                @endforeach --}}
                                                 <br><br>
                                                 id: {{ $image->id }} <br>
                                                 path: {{ $image->path }} <br>

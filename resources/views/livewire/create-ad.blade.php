@@ -24,6 +24,14 @@
         @endif
     @endif
     <h1>{{ __('Nuevo Anuncio') }}</h1>
+    <p class="alert alert-warning">Pagina de muestra, ¡no introducir datos reales!</p>
+    <div class="alert alert-info">
+        <ul>
+            <p>Características:</p>
+            <li>Validación de datos dinámica durante la introducción de datos</li>
+            <li>No refresca la página mediante la tecnología de livewire</li>
+            <li>Los anuncios subidos no se muestran al público hasta que un revisor los apruebe</li>
+    </div>
     <form wire:submit.prevent="store">
         @csrf
         <div class="mb-3">

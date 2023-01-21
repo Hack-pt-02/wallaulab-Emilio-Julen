@@ -7,6 +7,26 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html {
+    position: relative;
+    min-height: 100%;
+  }
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    margin-bottom: 150px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 150px;
+}
+
 .call-to-action {background:#0086d2; padding:40px 0;}
 
 .call-to-action  h1{
@@ -64,11 +84,6 @@
 }
 .UNKNOWN {
     color: grey;
-}
-
-body {
-    max-width: 1900px;
-    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #ffffff 40px ), repeating-linear-gradient( #828FD155, #828FD1 );
 }
 
 .btn-primary {

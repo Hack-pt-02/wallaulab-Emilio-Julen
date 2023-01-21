@@ -53,9 +53,9 @@ class RevisorController extends Controller
 
     public function makeRevisor(User $user)
     {
-        Artisan::call('rapido:makeUserRevisor', ['email' => $user->email]);
+        Artisan::call('wallaulab:makeUserRevisor', ['email' => $user->email]);
         return redirect()
             ->route('home')
-            ->withMessage(['type' => 'success', 'text' => 'Ya tenemos un compañero más']);
+            ->withMessage(['type' => 'success', 'text' => '¡Ya eres revisor! 🎉🎉 Ahora puedes entrar en el panel de revisor y aceptar los anuncios subidos. En la campana te aparecen los anuncios pendientes, ya puedes ir revisando 🚀']);
     }
 }

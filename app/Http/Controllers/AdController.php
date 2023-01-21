@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Ad;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdController extends Controller
 {
@@ -15,7 +16,8 @@ class AdController extends Controller
 
     public function create()
     {
-        return view('ad.create');
+        $user = Auth::user();
+        return view('ad.create', compact('user'));
     }
 
     public function show(Ad $ad){

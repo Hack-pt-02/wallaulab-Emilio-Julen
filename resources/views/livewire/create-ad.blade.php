@@ -8,7 +8,7 @@
                 console.log('funciona!')
                 Swal.fire(
                     '¡Felicidades!',
-                    'Anuncio subido correctamente',
+                    'Anuncio subido correctamente. <br><br>Para poder mostrarlo debes aceptar el anuncio, para ello tienes un botón bajo el formulario que pone solicitar ser revisor. Haz click y continua los pasos siguientes :D',
                     'success'
                 )
             </script>

@@ -4,8 +4,8 @@
         <img src="/media/bienvenido-a-wallaulab-banner.png" class="img-fluid">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 col-sm-8 text-right m-text-center">
-                    <h1>{{ __('¿Tienes un producto y no sabes qué hacer con él?') }}</h1>
+                <div class="col-md-8 col-sm-8 text-right m-text-center my-3">
+                    <h1>{{ __('Últimos anuncios') }}:</h1>
                 </div>
                 <div class="col-md-4 col-sm-4 m-text-center">
                     <a class="box-icon btn btn-success" href="{{ Route('ads.create') }}">{{ __('¡SÚBELO!') }}</a>
